@@ -44,8 +44,12 @@ Measured on a 4-vCPU / 8 GB server with local Whisper `small`: 5 minutes of Fren
 4. For Claude sessions, link the skill once (a link, not a copy: a `git pull` keeps it current):
 
    ```bash
+   mkdir -p /root/maxxing/.claude/skills
    ln -s /root/maxxing/extensions/transcription/skill/transcription /root/maxxing/.claude/skills/transcription
    ```
+
+   If topic sessions do not pick it up (see *Skills* in the Harness docs), link it at the user level instead, which
+   always works: `ln -s /root/maxxing/extensions/transcription/skill/transcription ~/.claude/skills/transcription`.
 
 ## Use
 
@@ -73,8 +77,8 @@ in the extension's state folder on your server; an upload is deleted as soon as 
 ## Update and remove
 
 - Update: `git -C /root/maxxing/extensions/transcription pull`, then **Settings -> Extensions -> Reload**.
-- Remove: delete `/root/maxxing/extensions/transcription` and the link `/root/maxxing/.claude/skills/transcription`,
-  then **Reload**. Optionally remove `GEMINI_API_KEY` from Settings -> Keys.
+- Remove: delete `/root/maxxing/extensions/transcription` and the skill link (`/root/maxxing/.claude/skills/transcription`
+  or `~/.claude/skills/transcription`), then **Reload**. Optionally remove `GEMINI_API_KEY` from Settings -> Keys.
 
 ## Development
 

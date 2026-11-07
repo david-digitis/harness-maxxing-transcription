@@ -3,6 +3,7 @@
 ## 1.0.1 - 2026-11-07
 
 - The engine selector is compact (it took the full width).
+- README: create the skills folder first, and the user-level fallback for the skill link.
 
 ## 1.0.0 - 2026-11-07
 
