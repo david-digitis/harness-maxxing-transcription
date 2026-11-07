@@ -1,0 +1,8 @@
+{
+  "id": "transcription",
+  "name": {"en": "Transcription", "fr": "Transcription"},
+  "type": "page",
+  "icon": "mic",
+  "version": "1.0.1",
+  "api": 1
+}
